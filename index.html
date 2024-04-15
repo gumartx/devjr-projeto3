@@ -13,12 +13,12 @@
 
     <div class="container">
         <div class="header">
-            <object data="assets/home.jpg" ></object>
+            <object data="assets/home.jpg"></object>
             <div class="header-title">
                 <h1> Menu - Faça A Sua Escolha </h1>
             </div>
         </div>
-        
+
         <div class="menu main-menu">
             <div>
                 <h2>Prato Principal</h2>
@@ -29,16 +29,31 @@
                     <object data="assets/bife.jpg"></object>
                     <h3>Bife com batata</h3>
                     <p>R$ 30,00</p>
+                    <div class="quantity">
+                        <button onclick="countBife('-')" class="button">-</button>
+                        <div id="quantityBife" class="count">0</div>
+                        <button onclick="countBife('+')" class="button">+</button>
+                    </div>
                 </div>
                 <div class="food">
                     <object data="assets/coxa.jpg"></object>
                     <h3>Coxa de Frango Crocante</h3>
                     <p>R$ 25,00</p>
+                    <div class="quantity">
+                        <button onclick="countCoxa('-')" class="button">-</button>
+                        <div id="quantityCoxa" class="count">0</div>
+                        <button onclick="countCoxa('+')" class="button">+</button>
+                    </div>
                 </div>
                 <div class="food">
                     <object data="assets/panela.jpg"></object>
                     <h3>Carne de Panela</h3>
                     <p>R$ 22,00</p>
+                    <div class="quantity">
+                        <button onclick="countCarne('-')" class="button">-</button>
+                        <div id="quantityCarne" class="count">0</div>
+                        <button onclick="countCarne('+')" class="button">+</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -51,16 +66,31 @@
                         <object data="assets/farofa.jpg"></object>
                         <h3>Farofa</h3>
                         <p>R$ 10,00</p>
+                        <div class="quantity">
+                            <button onclick="countFarofa('-')" class="button">-</button>
+                            <div id="quantityFarofa" class="count">0</div>
+                            <button onclick="countFarofa('+')" class="button">+</button>
+                        </div>
                     </div>
                     <div class="food">
                         <object data="assets/salad.jpg"></object>
                         <h3>Salada</h3>
                         <p>R$ 8,00</p>
+                        <div class="quantity">
+                            <button onclick="countSalada('-')" class="button">-</button>
+                            <div id="quantitySalada" class="count">0</div>
+                            <button onclick="countSalada('+')" class="button">+</button>
+                        </div>
                     </div>
                     <div class="food">
                         <object data="assets/torresmo.jpg"></object>
                         <h3>Torresmo</h3>
                         <p>R$ 12,00</p>
+                        <div class="quantity">
+                            <button onclick="countTorresmo('-')" class="button">-</button>
+                            <div id="quantityTorresmo" class="count">0</div>
+                            <button onclick="countTorresmo('+')" class="button">+</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,7 +101,7 @@
             <input type="number" placeholder="Telefone">
             <input type="email" placeholder="Email">
         </div>
-        <button>Calcular</button>
+        <button class="calc">Calcular</button>
         <div id="order" class="order">
 
         </div>
