@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -13,51 +13,66 @@
 
     <div class="container">
         <div class="header">
-            <object data="assets/home.jpg" type="image/svg+xml"></object>
+            <object data="assets/home.jpg" ></object>
+            <div class="header-title">
+                <h1> Menu - Faça A Sua Escolha </h1>
+            </div>
         </div>
-        <h1> Menu - Faça A Sua Escolha </h1>
+        
         <div class="menu main-menu">
             <div>
                 <h2>Prato Principal</h2>
-                <p>Todos os pratos acompanham arroz, feijão e a sobremesa do dia.</p>
+                <div>Todos os pratos acompanham arroz, feijão e a sobremesa do dia.</div>
             </div>
             <div class="menu-content">
                 <div class="food">
-                    <object data="assets/bife.jpg" type="image/svg+xml"></object>
+                    <object data="assets/bife.jpg"></object>
+                    <h3>Bife com batata</h3>
+                    <p>R$ 30,00</p>
                 </div>
                 <div class="food">
-                    <object data="assets/coxa.jpg" type="image/svg+xml"></object>
+                    <object data="assets/coxa.jpg"></object>
+                    <h3>Coxa de Frango Crocante</h3>
+                    <p>R$ 25,00</p>
                 </div>
                 <div class="food">
-                    <object data="assets/panela.jpg" type="image/svg+xml"></object>
+                    <object data="assets/panela.jpg"></object>
+                    <h3>Carne de Panela</h3>
+                    <p>R$ 22,00</p>
                 </div>
             </div>
         </div>
         <div class="menu side-dish">
             <div>
-                <h2>Acompanhamento</h2>
-                <p>Porções para uma pessoa.</p>
+                <h2>Acompanhamentos</h2>
+                <div>Porções para uma pessoa.</div>
                 <div class="menu-content">
                     <div class="food">
-                        <object data="assets/farofa.jpg" type="image/svg+xml"></object>
+                        <object data="assets/farofa.jpg"></object>
+                        <h3>Farofa</h3>
+                        <p>R$ 10,00</p>
                     </div>
                     <div class="food">
-                        <object data="assets/salad.jpg" type="image/svg+xml"></object>
+                        <object data="assets/salad.jpg"></object>
+                        <h3>Salada</h3>
+                        <p>R$ 8,00</p>
                     </div>
                     <div class="food">
-                        <object data="assets/torresmo.jpg" type="image/svg+xml"></object>
+                        <object data="assets/torresmo.jpg"></object>
+                        <h3>Torresmo</h3>
+                        <p>R$ 12,00</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="menu data">
             <h2>Dados Pessoais</h2>
-            <input type="text">
-            <input type="text">
-            <input type="email">
+            <input type="text" placeholder="Nome">
+            <input type="number" placeholder="Telefone">
+            <input type="email" placeholder="Email">
         </div>
         <button>Calcular</button>
-        <div class="order">
+        <div id="order" class="order">
 
         </div>
     </div>
