@@ -3,7 +3,6 @@
 body {
     background-color: #C5C1C0;
     font-family: 'Wix Madefor Text';
-    font-weight: 700;
 }
 
 h1 {
@@ -68,7 +67,14 @@ input:focus {
 }
 
 .menu h2 {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+
+.menu-subtitle {
+    margin-top: 0;
+    font-weight: 600;
+    font-size: 1.3rem;
 }
 
 .menu-content {
@@ -135,4 +141,8 @@ input:focus {
     margin-top: 60px;
     display: flex;
     flex-direction: column;
+}
+
+#order div, li {
+    font-size: 1.2rem;
 }

@@ -51,7 +51,7 @@ function viewOrder() {
                 totalOrder += total;
             }
         }
-        totalOrder = `<div></br></br><strong>Preço final ${formatter.format(totalOrder)}</strong></div>`;
+        totalOrder = `<h2></br></br><strong>Preço final ${formatter.format(totalOrder)}</strong></h2>`;
         document.getElementById("order").innerHTML += totalOrder;
     } else {
         document.getElementById("order").innerHTML = "<div></br></br> Dados inválidos </div>";
