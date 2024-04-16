@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
+
 body {
     background-color: #C5C1C0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Wix Madefor Text';
+    font-weight: 700;
 }
 
 h1 {
@@ -8,8 +11,7 @@ h1 {
 }
 
 h2, h3 {
-    font-weight: 600;
-    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
     margin: 0;
 }
 
@@ -18,7 +20,6 @@ p {
     margin-bottom: 10px;
     font-weight: 700;
     color: #226e21;
-    font-family: 'Times New Roman', Times, serif;
     font-size: 1.4rem;
 }
 
@@ -40,7 +41,7 @@ input:focus {
     background-color: #FFFFFF;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     margin: auto;
-    width: 60%;
+    width: 900px;
     padding: 30px;
     border-radius: 15px;
 }
@@ -52,6 +53,7 @@ input:focus {
 
 .header-title {
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .menu {
