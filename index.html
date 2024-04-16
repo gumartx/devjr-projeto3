@@ -30,9 +30,9 @@
                     <h3>Bife com batata</h3>
                     <p>R$ 30,00</p>
                     <div class="quantity">
-                        <button onclick="countBife('-')" class="button">-</button>
-                        <div id="quantityBife" class="count">0</div>
-                        <button onclick="countBife('+')" class="button">+</button>
+                        <button onclick="countQty('-', 1)" class="button">-</button>
+                        <div id="1" class="count">0</div>
+                        <button onclick="countQty('+', 1)" class="button">+</button>
                     </div>
                 </div>
                 <div class="food">
@@ -40,9 +40,9 @@
                     <h3>Coxa de Frango Crocante</h3>
                     <p>R$ 25,00</p>
                     <div class="quantity">
-                        <button onclick="countCoxa('-')" class="button">-</button>
-                        <div id="quantityCoxa" class="count">0</div>
-                        <button onclick="countCoxa('+')" class="button">+</button>
+                        <button onclick="countQty('-', 2)" class="button">-</button>
+                        <div id="2" class="count">0</div>
+                        <button onclick="countQty('+', 2)" class="button">+</button>
                     </div>
                 </div>
                 <div class="food">
@@ -50,9 +50,9 @@
                     <h3>Carne de Panela</h3>
                     <p>R$ 22,00</p>
                     <div class="quantity">
-                        <button onclick="countCarne('-')" class="button">-</button>
-                        <div id="quantityCarne" class="count">0</div>
-                        <button onclick="countCarne('+')" class="button">+</button>
+                        <button onclick="countQty('-', 3)" class="button">-</button>
+                        <div id="3" class="count">0</div>
+                        <button onclick="countQty('+', 3)" class="button">+</button>
                     </div>
                 </div>
             </div>
@@ -67,9 +67,9 @@
                         <h3>Farofa</h3>
                         <p>R$ 10,00</p>
                         <div class="quantity">
-                            <button onclick="countFarofa('-')" class="button">-</button>
-                            <div id="quantityFarofa" class="count">0</div>
-                            <button onclick="countFarofa('+')" class="button">+</button>
+                            <button onclick="countQty('-', 4)" class="button">-</button>
+                            <div id="4" class="count">0</div>
+                            <button onclick="countQty('+', 4)" class="button">+</button>
                         </div>
                     </div>
                     <div class="food">
@@ -77,9 +77,9 @@
                         <h3>Salada</h3>
                         <p>R$ 8,00</p>
                         <div class="quantity">
-                            <button onclick="countSalada('-')" class="button">-</button>
-                            <div id="quantitySalada" class="count">0</div>
-                            <button onclick="countSalada('+')" class="button">+</button>
+                            <button onclick="countQty('-', 5)" class="button">-</button>
+                            <div id="5" class="count">0</div>
+                            <button onclick="countQty('+', 5)" class="button">+</button>
                         </div>
                     </div>
                     <div class="food">
@@ -87,9 +87,9 @@
                         <h3>Torresmo</h3>
                         <p>R$ 12,00</p>
                         <div class="quantity">
-                            <button onclick="countTorresmo('-')" class="button">-</button>
-                            <div id="quantityTorresmo" class="count">0</div>
-                            <button onclick="countTorresmo('+')" class="button">+</button>
+                            <button onclick="countQty('-', 6)" class="button">-</button>
+                            <div id="6" class="count">0</div>
+                            <button onclick="countQty('+', 6)" class="button">+</button>
                         </div>
                     </div>
                 </div>
@@ -97,17 +97,24 @@
         </div>
         <div class="menu data">
             <h2>Dados Pessoais</h2>
-            <input type="text" placeholder="Nome">
-            <input type="number" placeholder="Telefone">
-            <input type="email" placeholder="Email">
+            <input id="name" type="text" placeholder="Nome">
+            <input id="telephone" type="text" placeholder="Telefone">
+            <input id="email" type="email" placeholder="Email">
         </div>
-        <button class="calc">Calcular</button>
-        <div id="order" class="order">
+        <button onclick="viewOrder()" class="calc">Calcular</button>
+        <div id="order">
 
         </div>
+        
     </div>
 
     <script src="script.js"></script>
+    <script src="js/jquery-3.6.0.min.js"> </script>
+    <script src="js/jquery.mask.min.js"> </script>
+
+    <script>
+        $("#telephone").mask("(99) 9999-99999");
+    </script>
 </body>
 
 </html>

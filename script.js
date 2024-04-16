@@ -1,55 +1,59 @@
-var quantityTorresmo = 0;
-var quantitySalada = 0;
-var quantityFarofa = 0;
-var quantityBife = 0;
-var quantityCoxa = 0;
-var quantityCarne = 0;
 
-function countCarne(op) {
-    var tipo = "quantityCarne";
-    quantityCarne = convert(op, tipo, quantityCarne);
-}
+var prods = [
+    { id: 1, name: "Bife com batata", price: 30.00, quantity: 0 },
+    { id: 2, name: "Coxa de Frango Crocante", price: 25.00, quantity: 0 },
+    { id: 3, name: "Carne de Panela", price: 22.00, quantity: 0 },
+    { id: 4, name: "Farofa", price: 10.00, quantity: 0 },
+    { id: 5, name: "Salada", price: 8.00, quantity: 0 },
+    { id: 6, name: "Torresmo", price: 12.00, quantity: 0 }
+];
 
-function countCoxa(op) {
-    var tipo = "quantityCoxa";
-    quantityCoxa = convert(op, tipo, quantityCoxa);
-}
+function countQty(op, id) {
 
-function countBife(op) {
-    var tipo = "quantityBife";
-    quantityBife = convert(op, tipo, quantityBife);
-}
-
-function countTorresmo(op) {
-    var tipo = "quantityTorresmo";
-    quantityTorresmo = convert(op, tipo, quantityTorresmo);
-}
-
-function countSalada(op) {
-    var tipo = "quantitySalada";
-    quantitySalada = convert(op, tipo, quantitySalada);
-}
-
-function countFarofa(op) {
-    var tipo = "quantityFarofa";
-    quantityFarofa = convert(op, tipo, quantityFarofa);
-}
-
-function convert(op, tipo, quantity) {
+    var food = prods[id-1];
 
     switch (op) {
         case "+":
-            quantity++;
-            document.getElementById(tipo).innerHTML = quantity;
+            food.quantity++;
+            document.getElementById(food.id).innerHTML = food.quantity;
             break;
         case "-":
-            if (quantity == 0 || quantity < 0) {
-                quantity == 0;
-                document.getElementById(tipo).innerHTML = quantity;
+            if (food.quantity == 0 || food.quantity < 0) {
+                food.quantity == 0;
+                document.getElementById(food.id).innerHTML = food.quantity;
             } else {
-                quantity--;
-                document.getElementById(tipo).innerHTML = quantity;
+                food.quantity--;
+                document.getElementById(food.id).innerHTML = food.quantity;
             }
+            break;
     }
-    return quantity;
+
+}
+
+function viewOrder() {
+    var name = document.getElementById("name").value;
+    var telephone = document.getElementById("telephone").value;
+    var email = document.getElementById("email").value;
+    var formatter = new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+    });
+
+    if (name != "" && telephone != "" && email != "") {
+        var orderName = `<div></br></br>Caro <strong>${name}</strong> </div> <div></br></br>Seguem os dados do seu pedido.</div> <div></br>O seu pedido é: </br></br></div>`;
+        var totalOrder = 0;
+        document.getElementById("order").innerHTML = orderName;
+        for (let i = 0; i < prods.length; i++) {
+            if (prods[i].quantity > 0) {
+                var total = prods[i].price * prods[i].quantity;
+                var orders = `<li>Prato: ${prods[i].name} - Preço unitário: ${formatter.format(prods[i].price)} - Quantidade: ${prods[i].quantity} - Total: ${formatter.format(total)}</li>`;
+                document.getElementById("order").innerHTML += orders;
+                totalOrder += total;
+            }
+        }
+        totalOrder = `<div></br></br><strong>Preço final ${formatter.format(totalOrder)}</strong></div>`;
+        document.getElementById("order").innerHTML += totalOrder;
+    } else {
+        document.getElementById("order").innerHTML = "<div></br></br> Dados inválidos </div>";
+    }
 }
